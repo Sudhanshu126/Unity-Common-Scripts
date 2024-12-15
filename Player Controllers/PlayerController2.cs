@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ);
-
-        transform.position = Vector3.Lerp(moveDirection, moveSpeed, Time.deltaTime);
+        Vector3 destination = tranform.position + moveDirection * moveSpeed;
+        transform.position = Vector3.Lerp(transform.position, destination, Time.deltaTime);
     }
 }
