@@ -32,7 +32,7 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(path, data);
     }
 
-    //Loads game data
+    //Loads player data
     public void LoadPlayerData()
     {
         string path = Application.persistentDataPath + "/GameData.json";
